@@ -1,42 +1,118 @@
-1. Имя, фамилия (реальные): Andrew Shavnev (Андрей Шавнёв)
+# Andrew Shavnev (Андрей Шавнёв)
 
-2. Контакты (желательно несколько):
-    - Phone: +375336959382
-    - Mail: andrevka@gmail.com
+## Contacts
+**phone:**: +375336959382  
+**e-mail**: andrevka@gmail.com
 
-3. Summary (цель, пожелания, раскрыть, что важно, что хочется и почему. 
-Некий вариант самопрезентации. Когда опыта минимум, джун продает свой потенциал, 
-свое желание и способность быстро учиться. Не занимать позицию, что он придет, 
-и все кинутся его учить. Но обратное – у джуна время все брать, отовсюду, всегда и т.д.).
-    dfg
-
-4. Skills (например: языки программирования, фреймворки, методологии, системы контроля версий, тулы...)
-    - Confident knowledge in PHP (Yii2, Drupal), JavaScript (NodeJS), TypeScript (Angular), Python (Falcon, Nameko), Delphi, FoxPro, HTML, CSS
-    - Little experience using Java, Dart, Kotlin, C++ (QT), Perl, Bash
-    - Git
+## Summary 
+I like programming - it's interesting. I have more experience than the junior! 
+Able to quickly understand unfamiliar code. 
+I want to work in a large stable company, improving my skills and knowledge
+     
+## Skills 
+* Confident knowledge in PHP (Yii2, Drupal), JavaScript (NodeJS), TypeScript (Angular), Python (Falcon, Nameko), Delphi, FoxPro, HTML, CSS
+* Little experience using Java, Dart, Kotlin, C++ (QT), Perl, Bash
+* Git
+* Databases: 
     - SQL (MySql, Postgres, Firebird, MSSql, Sqlite)
-    - ELK, Graphana, Sentry, Zipkin, Apache Zeppelin, Gitlab, RabbitMQ
+    - NoSQL (MongoDB)
+* ELK, Graphana, Sentry, Zipkin, Apache Zeppelin, Gitlab, RabbitMQ
+* Linux (Debian, Ubuntu)
+    
+## Code samples
+<details>
+<summary>javascript</summary>
 
-    Linux user
-    
-5. Примеры кода (по возможности СВЕЖИЕ)
-    - https://github.com/Andrew-6676/love-triangle
+```javascript
+/**
+ * @param preferences - an array of integers. Indices of people, whom they love
+ * @returns number of love triangles
+ */
+module.exports = function getLoveTrianglesCount(preferences = []) {
+  let skp = [];
+  let res = 0;
 
-6. Опыт (Junior-у имеет смысл указать весь опыт: тестовые задания, проекты с курсов, фрилансовые проекты – все, где он применял вышеупомянутые скилы. Круто, если это будет со ссылками на код)
-    Full stack developer 2014-2019 - PHP, HTML, JS, TS, Databases
-    My first app on Angular 
-    - Frontend - angular 2, upgraded to 5: https://bitbucket.org/Andrew-6676/urg.angular2/src/master/
-    - Backend - PHP+Yii2:  https://bitbucket.org/Andrew-6676/urg.yii2/src/master/
-    
-    Backend (NodeJS+Express) + Frontend (Angular 2.4)
-        - https://bitbucket.org/Andrew-6676/temperature/src/master/    
-    
-    В текущий момент веду работу над проектом с микросервисной архитектурой (Python)
-    
-7. Образование (в т.ч. курсы, семинары, лекции, онлайн-обучение)
-    POLOTSK STATE UNIVERSITY - FACULTY OF INFORMATION TECHNOLOGIES - Software Support of Information Technologies
-    курсы java EPAM in 2007
+  for (i in preferences) {
+    if (skp.indexOf(i * 1) > -1) {
+      continue;
+    }
+    let first = [preferences[i], i * 1];
+    let last = first;
+    let s = [];
 
-8. Уровень английского (тут стоит указать, какая именно практика была, как долго и т.д.) 
-Pre-Intermediate
-no practice
+    for (j = 1; j < 4; j++) {
+
+      if (last.join() == [preferences[last[0] - 1], last[0] - 1].join()) {
+        last = [];
+        break;
+      }
+      last = [preferences[last[0] - 1], last[0] - 1];
+      s.push(last[0] - 1);
+    }
+
+    if (first.join() == last.join()) {
+      res++;
+      skp = skp.concat(s)
+    }
+  }
+  return res;
+};
+```
+</details>
+
+<details>
+<summary>python</summary>
+
+```python
+def run(self, task: BaseTask):
+        """
+        Метод для запуска всех заданий, наследованых от BaseTask
+        :param task: проинициализированый объект задания
+        :return:
+        """
+        try:
+            return task.run()
+        except Exception as ex:
+            self.logger.error("ERROR",
+                       class_name=task.__class__.__name__,
+                       exception=ex.__class__.__name__,
+                       description=str(ex),
+                       task_uuid=task.uuid,
+                       task_id=task.tid,
+                       task=task.name,
+                       exc_info=ex)
+            data = {
+                'debug': task.debugdata,
+                'traceback':traceback.format_tb(ex.__traceback__)
+            }
+            self.bg_tasks.end_task(task.tid, status=-9, message="EXCEPTION ("+ex.__class__.__name__+"): "+str(ex), data=data)
+            raise ex
+``` 
+</details>
+
+
+    
+## Experience
+* 2006-2008: FoxPro and Delphi developer
+* 2008-2013: Delphi developer, system administrator (Windows)
+* 2014-2019: Full stack developer in PU Vitebskoblgas (PHP, HTML, JS, TS, Databases)
+
+At the moment I am working on a large project with microservice architecture. 
+The project includes a mobile client, a web-based desktop application, a REST-full API in the backend, 
+RPC microservices working through RabbitMQ
+
+My first app on Angular. This is database of gas reduction units: 
+* [Frontend](https://bitbucket.org/Andrew-6676/urg.angular2/src/master/) - angular 2, later upgraded to 5 
+* [Backend](https://bitbucket.org/Andrew-6676/urg.yii2/src/master/) - PHP+Yii2
+
+One of the first application on angular. It collects and displays temperature data from WellPro controllers using the Modbus protocol:
+* [Backend (NodeJS+Express) + Frontend (Angular 2.4)](https://bitbucket.org/Andrew-6676/temperature/src/master/)
+    
+## Education
+**2002-2006**: Vitebsk polytechnical сollege - Software Support of Information Technologies  
+**2006-2011**: POLOTSKolotsk state university - faculty of information technologies - Software Support of Information Technologies
+**2007**: EPAM Java courses  
+**2019**: [Code Academy](https://www.codecademy.com/users/andrew1622305209/achievements)   
+## English Skills
+English Level: Pre-Intermediate  
+Learning English started in school.   
