@@ -20,8 +20,8 @@ I want to work in a large stable company, improving my skills and knowledge
 * Linux (Debian, Ubuntu)
     
 ## Code samples
-<details>
-<summary>javascript</summary>
+
+##### javascript
 
 ```javascript
 /**
@@ -59,11 +59,7 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
 };
 ```
 
-</details>
-
-<details>
-<summary>python</summary>
-<p>
+##### python
 
 ```python
 def run(self, task: BaseTask):
@@ -90,11 +86,6 @@ def run(self, task: BaseTask):
             self.bg_tasks.end_task(task.tid, status=-9, message="EXCEPTION ("+ex.__class__.__name__+"): "+str(ex), data=data)
             raise ex
 ```
-
-</p> 
-</details>
-
-
     
 ## Experience
 * _**2006-2008**_: FoxPro and Delphi developer
