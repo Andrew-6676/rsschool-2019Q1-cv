@@ -1,8 +1,8 @@
 # Andrew Shavnev (Андрей Шавнёв)
 
 ## Contacts
-**phone:**: +375336959382  
-**e-mail**: andrevka@gmail.com
+_**phone:**_: +375336959382  
+_**e-mail**_: andrevka@gmail.com
 
 ## Summary 
 I like programming - it's interesting. I have more experience than the junior! 
@@ -58,10 +58,12 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
   return res;
 };
 ```
+
 </details>
 
 <details>
 <summary>python</summary>
+<p>
 
 ```python
 def run(self, task: BaseTask):
@@ -87,15 +89,17 @@ def run(self, task: BaseTask):
             }
             self.bg_tasks.end_task(task.tid, status=-9, message="EXCEPTION ("+ex.__class__.__name__+"): "+str(ex), data=data)
             raise ex
-``` 
+```
+
+</p> 
 </details>
 
 
     
 ## Experience
-* 2006-2008: FoxPro and Delphi developer
-* 2008-2013: Delphi developer, system administrator (Windows)
-* 2014-2019: Full stack developer in PU Vitebskoblgas (PHP, HTML, JS, TS, Databases)
+* _**2006-2008**_: FoxPro and Delphi developer
+* _**2008-2013**_: Delphi developer, system administrator (Windows)
+* _**2014-2019**_: Full stack developer in PU Vitebskoblgas (PHP, HTML, JS, TS, Databases)
 
 At the moment I am working on a large project with microservice architecture. 
 The project includes a mobile client, a web-based desktop application, a REST-full API in the backend, 
@@ -109,10 +113,11 @@ One of the first application on angular. It collects and displays temperature da
 * [Backend (NodeJS+Express) + Frontend (Angular 2.4)](https://bitbucket.org/Andrew-6676/temperature/src/master/)
     
 ## Education
-**2002-2006**: Vitebsk polytechnical сollege - Software Support of Information Technologies  
-**2006-2011**: POLOTSKolotsk state university - faculty of information technologies - Software Support of Information Technologies
-**2007**: EPAM Java courses  
-**2019**: [Code Academy](https://www.codecademy.com/users/andrew1622305209/achievements)   
+* _**2002-2006**_: Vitebsk polytechnical сollege - Software Support of Information Technologies  
+* _**2006-2011**_: POLOTSKolotsk state university - faculty of information technologies - Software Support of Information Technologies
+* _**2007**_: EPAM Java courses  
+* _**2019**_: [Code Academy](https://www.codecademy.com/users/andrew1622305209/achievements) 
+  
 ## English Skills
 English Level: Pre-Intermediate  
 Learning English started in school.   
