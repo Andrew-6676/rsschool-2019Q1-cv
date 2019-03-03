@@ -63,28 +63,28 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
 
 ```python
 def run(self, task: BaseTask):
-        """
-        Метод для запуска всех заданий, наследованых от BaseTask
-        :param task: проинициализированый объект задания
-        :return:
-        """
-        try:
-            return task.run()
-        except Exception as ex:
-            self.logger.error("ERROR",
-                       class_name=task.__class__.__name__,
-                       exception=ex.__class__.__name__,
-                       description=str(ex),
-                       task_uuid=task.uuid,
-                       task_id=task.tid,
-                       task=task.name,
-                       exc_info=ex)
-            data = {
-                'debug': task.debugdata,
-                'traceback':traceback.format_tb(ex.__traceback__)
-            }
-            self.bg_tasks.end_task(task.tid, status=-9, message="EXCEPTION ("+ex.__class__.__name__+"): "+str(ex), data=data)
-            raise ex
+    """
+    Метод для запуска всех заданий, наследованых от BaseTask
+    :param task: проинициализированый объект задания
+    :return:
+    """
+    try:
+        return task.run()
+    except Exception as ex:
+        self.logger.error("ERROR",
+                          class_name=task.__class__.__name__,
+                          exception=ex.__class__.__name__,
+                          description=str(ex),
+                          task_uuid=task.uuid,
+                          task_id=task.tid,
+                          task=task.name,
+                          exc_info=ex)
+        data = {
+            'debug': task.debugdata,
+            'traceback':traceback.format_tb(ex.__traceback__)
+        }
+        self.bg_tasks.end_task(task.tid, status=-9, message="EXCEPTION ("+ex.__class__.__name__+"): "+str(ex), data=data)
+        raise ex
 ```
     
 ## Experience
