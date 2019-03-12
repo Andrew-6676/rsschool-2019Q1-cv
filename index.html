@@ -5,8 +5,202 @@
     <title>Andrei Shauniou</title>
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <header>
+        <h1>Andrei Shauniou</h1>
+    </header>
+    <main>
+        <article>
+            <h2 class="title">Contacts</h2>
+            <img src="./assets/photo.jpg" alt="Andrei Shauniou">
+            <ul>
+                <li>
+                    <strong>phone:</strong>: <a href="tel:+375336959382">+375 (33) 695-93-82</a>
+                </li>
+                <li>
+                    <strong>e-mail</strong>: <a href="mailto:andrevka@gmail.com">andrevka@gmail.com</a>
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <h2 class="title">Summary</h2>
+            <p>
+                I like programming - it's interesting. I have more experience than the junior!
+            </p>
+            <p>
+                Able to quickly understand unfamiliar code.
+            </p>
+            <p>
+                I want to work in a large stable company, improving my skills and knowledge
+            </p>
+        </article>
+
+        <article>
+            <h2 class="title">Skills</h2>
+            <ul>
+                <li>
+                    Confident knowledge in PHP (Yii2, Drupal), JavaScript (NodeJS), TypeScript (Angular), Python (Falcon, Nameko), Delphi, FoxPro, HTML, CSS
+                </li>
+                <li>
+                    Little experience using Java, Dart, Kotlin, C++ (QT), Perl, Bash
+                </li>
+                <li>
+                    Git
+                </li>
+                <li>
+                    Databases:
+                    <ul>
+                        <li>SQL (MySql, Postgres, Firebird, MSSql, Sqlite)</li>
+                        <li>NoSQL (MongoDB)</li>
+                    </ul>
+                </li>
+                <li>
+                    ELK, Graphana, Sentry, Zipkin, Apache Zeppelin, Gitlab, RabbitMQ
+                </li>
+                <li>
+                    Linux (Debian, Ubuntu)
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <h2 class="title">Code samples</h2>
+
+            <details>
+                <summary>javascript</summary>
+                <pre>
+/**
+ * @param preferences - an array of integers. Indices of people, whom they love
+ * @returns number of love triangles
+ */
+module.exports = function getLoveTrianglesCount(preferences = []) {
+  let skp = [];
+  let res = 0;
+
+  for (i in preferences) {
+    if (skp.indexOf(i * 1) > -1) {
+      continue;
+    }
+    let first = [preferences[i], i * 1];
+    let last = first;
+    let s = [];
+
+    for (j = 1; j < 4; j++) {
+      if (last.join() == [preferences[last[0] - 1], last[0] - 1].join()) {
+        last = [];
+        break;
+      }
+      last = [preferences[last[0] - 1], last[0] - 1];
+      s.push(last[0] - 1);
+    }
+
+    if (first.join() == last.join()) {
+      res++;
+      skp = skp.concat(s)
+    }
+  }
+  return res;
+};
+                </pre>
+            </details>
+
+            <details>
+                <summary>python</summary>
+                <pre>
+def run(self, task: BaseTask):
+    """
+    Метод для запуска всех заданий, наследованых от BaseTask
+    :param task: проинициализированый объект задания
+    :return:
+    """
+    try:
+        return task.run()
+    except Exception as ex:
+        self.logger.error("ERROR",
+                          class_name=task.__class__.__name__,
+                          exception=ex.__class__.__name__,
+                          description=str(ex),
+                          task_uuid=task.uuid,
+                          task_id=task.tid,
+                          task=task.name,
+                          exc_info=ex)
+        data = {
+            'debug': task.debugdata,
+            'traceback':traceback.format_tb(ex.__traceback__)
+        }
+        self.bg_tasks.end_task(task.tid, status=-9,
+                               message="EXCEPTION ("+ex.__class__.__name__+"): "+str(ex),
+                               data=data)
+        raise ex
+                </pre>
+            </details>
+        </article>
+
+        <article>
+            <h2 class="title">Experience</h2>
+            <ul>
+                <li>
+                    <strong>2006-2008</strong>: FoxPro and Delphi developer
+                </li>
+                <li>
+                    <strong>2008-2013</strong>: Delphi developer, system administrator (Windows)
+                </li>
+                <li>
+                    <strong>2014-2019</strong>: Full stack developer in PU Vitebskoblgas (PHP, HTML, JS, TS, Databases)
+                </li>
+            </ul>
+
+            <p>
+                At the moment I am working on a large project with microservice architecture.
+                The project includes a mobile client, a web-based desktop application, a REST-full API in the backend,
+                RPC microservices working through RabbitMQ.
+            </p>
+            <p>
+                My first app on Angular. This is database of gas reduction units:
+            </p>
+            <p class="link">
+                <a href="https://bitbucket.org/Andrew-6676/urg.angular2/src/master/">Frontend</a> - angular 2, later upgraded to 5
+            </p>
+            <p class="link">
+                <a href="https://bitbucket.org/Andrew-6676/urg.yii2/src/master/">Backend</a> - PHP+Yii2
+            </p>
+            <p>
+                One of the first application on angular. It collects and displays temperature data from WellPro controllers using the Modbus protocol:
+            </p>
+            <p class="spec">
+                <a href="https://bitbucket.org/Andrew-6676/temperature/src/master/">Backend (NodeJS+Express) + Frontend (Angular 2.4)</a>
+            </p>
+
+        </article>
+
+        <article>
+            <h2 class="title">Education</h2>
+            <ul>
+                <li>
+                    <strong>2002-2006</strong>: Vitebsk polytechnical сollege - Software Support of Information Technologies
+                </li>
+                <li>
+                    <strong>2006-2011</strong>: POLOTSKolotsk state university - faculty of information technologies - Software Support of Information Technologies
+                </li>
+                <li>
+                    <strong>2007</strong>: EPAM Java courses
+                </li>
+                <li>
+                    <strong>2019</strong>: [Code Academy](https://www.codecademy.com/users/andrew1622305209/achievements)
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <h2 class="title">English Skills</h2>
+            <p>
+                English Level: Pre-Intermediate
+            </p>
+            <p>
+                Learning English started in school.
+            </p>
+        </article>
+    </main>
     <footer></footer>
 </body>
 </html>
