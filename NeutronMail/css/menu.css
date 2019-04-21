@@ -1,0 +1,67 @@
+.menu * {
+    color: #858688;
+    font-size: 16px;
+    outline: none;
+}
+
+.menu a:hover {
+    color: #5b4295;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.menu.language, .menu.socials {
+    font-size: 14px;
+    margin-top: 20px;
+}
+.menu a.selected {
+    font-weight: bold;
+}
+
+.menu .menu-item, .menu .separator {
+    display: inline-block;
+    margin-right: 20px;
+}
+.menu .separator {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.menu.language .menu-item,
+.menu.language .separator {
+    margin-right: 7px;
+}
+.menu.main {
+    margin-right: 70px;
+}
+
+.menu.login .sign-btn {
+    width: 94px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.17), 0 3px 3px rgba(102, 145, 233, 0.09), 0 3px 9px rgba(0, 0, 0, 0.09), 0 3px 9px rgba(53, 103, 205, 0.09), 0 4px 16px rgba(0, 0, 0, 0.09), 0 4px 16px rgba(102, 145, 233, 0.33), 0 13px 21px rgba(0, 0, 0, 0.15), 0 13px 21px rgba(20, 80, 204, 0.27), 0 7px 9px rgba(142, 117, 222, 0.15);
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    letter-spacing: 0.16px;
+
+    background: #582c7e;
+    background: -moz-linear-gradient(-45deg, #582c7e 31%, #6275cb 100%);
+    background: -webkit-linear-gradient(-45deg, #582c7e 31%,#6275cb 100%);
+    background: linear-gradient(135deg, #582c7e 31%,#6275cb 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582c7e', endColorstr='#6275cb',GradientType=1 );
+}
+
+.menu.login .login-btn {
+    box-shadow: none;
+    background-color: transparent;
+    color: #454545;
+    font-weight: 700;
+    letter-spacing: 0.16px;
+}

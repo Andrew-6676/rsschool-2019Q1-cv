@@ -1,8 +1,19 @@
+@font-face {
+    font-family: "Malaga OT Reg Italic";
+    font-weight: 400;
+    src: url("../assets/fonts/Malaga OT Reg Italic.otf") format("opentype");
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    max-width: 1800px;
+    margin: auto;
+}
+
 a {
     text-decoration: none;
 }
@@ -26,14 +37,12 @@ a.round.long {
     height: 59px;
     width: auto;
 }
-.createacc-btn {
+.gradient-button {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 246px;
     height: 56px;
-    margin-right: 25px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.17), 0 3px 3px rgba(102, 145, 233, 0.09), 0 3px 9px rgba(0, 0, 0, 0.09), 0 3px 9px rgba(53, 103, 205, 0.09), 0 4px 16px rgba(0, 0, 0, 0.09), 0 4px 16px rgba(102, 145, 233, 0.33), 0 13px 21px rgba(0, 0, 0, 0.15), 0 13px 21px rgba(20, 80, 204, 0.27), 0 7px 9px rgba(100, 115, 151, 0.15), 0 0 7px rgba(95, 47, 106, 0.25);
     border-radius: 28px;
     color: #ffffff;
     font-family: "Titillium Web";
@@ -46,6 +55,10 @@ a.round.long {
     background: -webkit-linear-gradient(-45deg, #636b92 33%,#636b92 33%,#60326c 100%);
     background: linear-gradient(135deg, #636b92 33%,#636b92 33%,#60326c 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#636b92', endColorstr='#60326c',GradientType=1 );
+}
+.createacc-btn {
+    margin-right: 25px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.17), 0 3px 3px rgba(102, 145, 233, 0.09), 0 3px 9px rgba(0, 0, 0, 0.09), 0 3px 9px rgba(53, 103, 205, 0.09), 0 4px 16px rgba(0, 0, 0, 0.09), 0 4px 16px rgba(102, 145, 233, 0.33), 0 13px 21px rgba(0, 0, 0, 0.15), 0 13px 21px rgba(20, 80, 204, 0.27), 0 7px 9px rgba(100, 115, 151, 0.15), 0 0 7px rgba(95, 47, 106, 0.25);
 }
 nav {
     padding-top: 60px;
@@ -60,18 +73,6 @@ nav section.bottom, nav .menu, nav section.top, nav .main-menu-wrapper {
     align-items: center;
 }
 
-nav * {
-    color: #858688;
-    font-size: 16px;
-    outline: none;
-}
-
-nav a:hover {
-    color: #5b4295;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
 h1.logo, h1.logo strong {
     font-family: "Titillium Web";
     font-size: 30px;
@@ -80,52 +81,6 @@ h1.logo, h1.logo strong {
 h1.logo strong {
     color: #5b4295;
     font-weight: 700;
-}
-.menu.language {
-    font-size: 14px;
-    margin-top: 20px;
-}
-nav a.selected {
-    font-weight: bold;
-}
-
-nav .menu .menu-item, .menu .separator {
-    display: inline-block;
-    margin-right: 20px;
-}
-.menu.language .menu-item,
-.menu.language .separator {
-    margin-right: 7px;
-}
-nav .menu.main {
-    margin-right: 70px;
-}
-
-.menu.login .sign-btn {
-    width: 94px;
-    height: 40px;
-    border-radius: 20px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.17), 0 3px 3px rgba(102, 145, 233, 0.09), 0 3px 9px rgba(0, 0, 0, 0.09), 0 3px 9px rgba(53, 103, 205, 0.09), 0 4px 16px rgba(0, 0, 0, 0.09), 0 4px 16px rgba(102, 145, 233, 0.33), 0 13px 21px rgba(0, 0, 0, 0.15), 0 13px 21px rgba(20, 80, 204, 0.27), 0 7px 9px rgba(142, 117, 222, 0.15);
-    color: #ffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    letter-spacing: 0.16px;
-
-    background: #582c7e;
-    background: -moz-linear-gradient(-45deg, #582c7e 31%, #6275cb 100%);
-    background: -webkit-linear-gradient(-45deg, #582c7e 31%,#6275cb 100%);
-    background: linear-gradient(135deg, #582c7e 31%,#6275cb 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582c7e', endColorstr='#6275cb',GradientType=1 );
-}
-
-.menu.login .login-btn {
-    box-shadow: none;
-    background-color: transparent;
-    color: #454545;
-    font-weight: 700;
-    letter-spacing: 0.16px;
 }
 
 /* end nav*/

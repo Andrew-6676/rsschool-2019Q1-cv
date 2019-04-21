@@ -1,0 +1,84 @@
+footer {
+    display: grid;
+    margin-right: 15%;
+    grid-template-rows: 200px auto auto;
+    grid-template-columns: 7% 3fr 1fr 1fr 1fr;
+    font-family: "Titillium Web";
+}
+
+.banner-2 {
+    grid-column: 1/span 5;
+    text-align: right;
+    border-top: 1px solid #b9b9b9;
+    border-right: 1px solid #b9b9b9;
+    padding: 10px;
+
+    color: #7a7a7a;
+    font-size: 14px;
+    letter-spacing: 0.14px;
+}
+
+footer article.mail {
+    grid-row: 2;
+    grid-column: 2;
+    border-left: 1px solid #b9b9b9;
+    padding-left: 10px;
+    align-self: start;
+}
+footer article.mail p {
+    font-size: 14px;
+}
+footer article.mail a {
+    color: #5c5c5c;
+    letter-spacing: 0.14px;
+    font-weight: 700;
+}
+footer article.mail .support {
+    font-weight: 700;
+    letter-spacing: 0.14px;
+    text-decoration: underline;
+}
+
+footer article.company {
+    grid-row: 2;
+    grid-column: 3;
+    border-right: 1px solid #b9b9b9;
+}
+footer article.legal {
+    grid-row: 2;
+    grid-column: 4;
+}
+footer article.neutronmail {
+    grid-row: 2;
+    grid-column: 5;
+    border-right: 1px solid #b9b9b9;
+}
+footer .bottom-wrapper {
+    grid-row: 3;
+    grid-column: 2/span 2;
+    border-right: 1px solid #b9b9b9;
+}
+
+article.right {
+    padding-right: 15px;
+    text-align: right;
+    color: #5c5c5c;
+    font-size: 14px;
+    letter-spacing: 0.14px;
+}
+article.right h4 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.24px;
+}
+footer article.right ul {
+    margin-top: 10px;
+    direction: rtl;
+    list-style-position: inside;
+}
+
+.copyright {
+    color: #5c5c5c;
+    font-size: 12px;
+    letter-spacing: 0.12px;
+}
