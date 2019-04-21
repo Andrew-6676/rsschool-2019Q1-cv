@@ -1,0 +1,136 @@
+
+section.features {
+    display: grid;
+    grid-template-columns: 3fr 5fr 5fr 5fr 3fr;
+    grid-template-rows: 100px auto 1fr 2fr;
+    padding-bottom: 50px;
+    position: relative;
+    top: -15px;
+}
+
+section.features .feat.title.swiss {
+    grid-column: 2;
+    grid-row: 2;
+}
+section.features .feat.title.encrypt {
+    grid-column: 3;
+    grid-row: 2;
+}
+section.features .feat.title.mail {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+section.features .feat.text.swiss {
+    grid-column: 2;
+    grid-row: 3;
+}
+section.features .feat.text.encrypt {
+    grid-column: 3;
+    grid-row: 3;
+}
+section.features .feat.text.mail {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+
+section.features .feat.title {
+    padding: 15px 35px 0 35px;
+}
+section.features .feat h3 {
+    color: #555555;
+    font-size: 30px;
+}
+section.features .feat p {
+    font-size: 18px;
+    color: #959393;
+}
+
+section.features .feat.title img {
+    float: left;
+    margin-right: 10px;
+}
+section.features .feat.title h3 {
+    font-size: 22pt;
+    color: #555;
+}
+section.features .feat.text {
+    padding: 15px 35px 0 35px;
+    color: #959393;
+    font-size: 14px;
+}
+
+section.features img {
+    width: 64px;
+    height: 64px;
+}
+
+.main-feat {
+    grid-column: 2/span 2;
+    grid-row: 4;
+    text-align: right;
+    position: relative;
+    padding: 40px;
+    padding-bottom: 55px;
+}
+.main-feat h2 {
+    color: #535353;
+    font-size: 60px;
+}
+
+.main-feat p {
+    color: #959393;
+    font-size: 24px;
+}
+.main-feat p strong {
+    color: #f65151;
+}
+
+a.corner-rounded {
+    display: flex;
+    background: #fff;
+    width: 334px;
+    height: 62px;
+    border-radius: 31px;
+    border: 1px solid #b9b9b9;
+    color: #676767;
+    /*font-family: "Titillium Web";*/
+    font-size: 16px;
+
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -167px;
+    bottom: -31px;
+}
+a.corner-rounded:hover {
+    background: #5b4295;
+    color: #fff;
+}
+/* lines */
+
+section.features .top-line {
+    grid-column: 2;
+    grid-row: 1;
+}
+section.features .right-line {
+    grid-column: 5;
+    grid-row: 1;
+}
+section.features .bottom-line {
+    grid-column: 1/span 3;
+    grid-row: 4;
+}
+
+section.features .bottom-line,
+section.features .feat.encrypt,
+section.features .feat.title.swiss,
+section.features .top-line {
+    border-right: 1px solid #b9b9b9;
+}
+
+section.features .bottom-line,
+section.features .right-line {
+    border-bottom: 1px solid #b9b9b9;
+}
