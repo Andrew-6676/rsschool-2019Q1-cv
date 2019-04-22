@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    font-size: 12pt;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    width: 1020px;
+    margin: 0 auto;
+}
+header {
+    position: relative;
+    background: #323232;
+    height: 63px;
+}
+header:after {
+    position: absolute;
+    top: 0;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 89px 155px 0 155px;
+    border-color: #323232 transparent transparent transparent;
+    z-index: 1;
+}
+.hidden {
+    visibility: hidden;
+}
+/* section with hexagons*/
+.hexagon-container {
+    background-color: #fff;
+    height: 721px;
+    position: relative;
+    padding: 135px 12px;
+}
+.hexagon-container .row {
+    display: inline-block;
+    margin-top: -45px;
+    position: relative;
+}
+.hexagon-container .row:nth-child(odd) {
+    margin-left: 80px;
+    padding: 0 20px;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 19px;
+    left: 30px;
+}
+.indicators .dot {
+    display: inline-block;
+    background-color: #ddd2c5;
+    width: 6px;
+    height: 6px;
+}
+.indicators .dot.active {
+    background-color: #8b8784;
+}
+.indicators .dot:hover {
+    cursor: pointer;
+    border: 1px solid red;
+}
+
+.hexagon-container hr {
+    display: block;
+    border: none;
+    background: #e4e9eb;
+    position: absolute;
+}
+.hexagon-container hr.hor {
+    height: 1px;
+}
+.hexagon-container hr.hor.left {
+    width: 410px;
+    top: 11px;
+    left: 30px;
+}
+.hexagon-container hr.hor.right {
+    width: 410px;
+    top: 11px;
+    right: 30px;
+}
+.hexagon-container hr.hor.bottom {
+    width: 960px;
+    bottom: 11px;
+    left: 30px;
+}
+
+.hexagon-container hr.vert {
+    height: 104px;
+    width: 1px;
+    top: 52px;
+}
+.hexagon-container hr.vert.left {
+    left: 0;
+    margin-left: 6px;
+}
+.hexagon-container hr.vert.right {
+    right: 0;
+    margin-right: 8px;
+}
+/* section with man */
+section.info {
+    height: 341px;
+    padding: 12px 99px;
+}
+
+.info-wrapper {
+    height: 100%;
+    border-left: 1px solid #219d84;
+    border-right: 1px solid #219d84;
+    display: grid;
+    grid-template-columns: 200px auto;
+    align-items: center;
+    grid-template-rows: 1fr 208px 1fr;
+    grid-column-gap: 20px;
+}
+.photo {
+    width: 182px;
+    height: 209px;
+    margin: auto 20px;
+    position: relative;
+    grid-row: 2/span 1;
+}
+.photo img {
+    position: absolute;
+    left: -65%;
+}
+
+
+section.info article {
+    grid-row: 2/span 1;
+    grid-column: 2/span 1;
+    display: grid;
+    grid-template-rows: 1fr 110px 1fr;
+    align-items: center;
+}
+section.info section.title-wrapper {
+    align-self: end;
+}
+section.info .title {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 22pt;
+    font-weight: normal;
+}
+section.info .subtitle {
+    font-size: 13pt;
+    font-family: 'Maven Pro', sans-serif;
+    color: rgba(32, 129, 109, 255);
+    font-weight: normal;
+}
+.info p {
+    font-size: 9pt;
+    line-height: 21.5px;
+}
+section.info section.text {
+    text-align: justify;
+    color: rgba(215, 252, 245, 255);
+    padding-right: 20px;
+}
+
+
+section.info section.socials {
+    background: url("../assets/socials/all.png");
+    background-size: 100%;
+    position: relative;
+    align-self: end;
+    justify-self: right;
+    margin: 24px 19px;
+    overflow: hidden;
+    height: 25px;
+}
+section.info a {
+    display: inline-block;
+    height: 25px;
+    width: 22px;
+}
+section.info a:nth-child(1):hover {
+    background: url("../assets/socials/f.png")
+}
+section.info a:nth-child(2):hover {
+    background: url("../assets/socials/t.png")
+}
+section.info a:nth-child(3):hover {
+    background: url("../assets/socials/g.png")
+}
+section.info a:nth-child(4):hover {
+    background: url("../assets/socials/p.png")
+}
+section.info a:nth-child(5):hover {
+    background: url("../assets/socials/i.png")
+}
+section.info a:nth-child(6):hover {
+    background: url("../assets/socials/o.png")
+}
+
+
+.socials img {
+    margin: -2px;
+    height: 24.7px;
+}
+
+
+section.info, .button-submit {
+    background-color: #2eb398;
+    color: rgba(215, 252, 245, 255);
+}
