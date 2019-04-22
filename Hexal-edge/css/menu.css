@@ -1,0 +1,50 @@
+.navigation {
+
+}
+.menu {
+    display: inline-block;
+    background-color: #323232;
+    text-align: center;
+    z-index: 2;
+    bottom: 19px;
+    position: absolute;
+    width: 100%;
+}
+.menu-item {
+    display: inline-block;
+    margin: 0 9px;
+}
+.menu-item.empty {
+    width: 93px;
+}
+.menu-item.dot {
+    color: #484c5f;
+    margin: 0;
+}
+.menu-item > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    /*line-height: 63px;*/
+    font-size: 7.2pt;
+    font-weight: 600;
+}
+
+.menu-item.active > a {
+    color: rgba(46, 179, 152, 255);
+}
+
+.menu-item > a:hover {
+    color: rgba(76, 179, 52, 255);
+}
+
+.logo {
+    height: 53px;
+    width: 66px;
+    background: url("../assets/logo.png") no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}

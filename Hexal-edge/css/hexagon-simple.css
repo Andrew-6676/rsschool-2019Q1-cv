@@ -1,0 +1,23 @@
+.hexagon {
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 182px;
+    height: 208px;
+    /*background-color: #ff0000;*/
+    margin: 0 7px;
+}
+
+image {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    /*left: 50%;*/
+    /*transform: translate(-50%, 0);*/
+}
+
+.hexagon:hover image {
+    height: 105%;
+    transition: all .2s;
+}
