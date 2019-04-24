@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Andrei Shauniou</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header>
+    <h1>Andrei Shauniou</h1>
+</header>
+<main>
+    <article>
+        <h2 class="title">Contacts</h2>
+        <img class="photo" src="./assets/photo.jpg" alt="Andrei Shauniou" title="Sorry, I don't have normal photo">
+        <ul>
+            <li>
+                <strong>phone:</strong>: <a href="tel:+375336959382">+375 (33) 695-93-82</a>
+            </li>
+            <li>
+                <strong>e-mail</strong>: <a href="mailto:andrevka@gmail.com">andrevka@gmail.com</a>
+            </li>
+        </ul>
+    </article>
+
+    <article>
+        <h2 class="title">Summary</h2>
+        <p>
+            I like programming - it's interesting. I have more experience than the junior!
+        </p>
+        <p>
+            Able to quickly understand unfamiliar code.
+        </p>
+        <p>
+            I want to work in a large stable company, improving my skills and knowledge
+        </p>
+    </article>
+
+    <article>
+        <h2 class="title">Skills</h2>
+        <ul>
+            <li>
+                Confident knowledge in PHP (Yii2, Drupal), JavaScript (NodeJS), TypeScript (Angular), Python (Falcon,
+                Nameko), Delphi, FoxPro, HTML, CSS
+            </li>
+            <li>
+                Little experience using Java, Dart, Kotlin, C++ (QT), Perl, Bash
+            </li>
+            <li>
+                Git
+            </li>
+            <li>
+                Databases:
+                <ul>
+                    <li>SQL (MySql, Postgres, Firebird, MSSql, Sqlite)</li>
+                    <li>NoSQL (MongoDB)</li>
+                </ul>
+            </li>
+            <li>
+                ELK, Graphana, Sentry, Zipkin, Apache Zeppelin, Gitlab, RabbitMQ
+            </li>
+            <li>
+                Linux (Debian, Ubuntu)
+            </li>
+        </ul>
+    </article>
+
+    <article>
+        <h2 class="title">Code samples</h2>
+
+        <details>
+            <summary>javascript</summary>
+            <pre style='color:#000000;background:#ffffff;'>
+                <span style='color:#3f5fbf; '>/**</span>
+                <span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span
+                    style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@param</span><span
+                    style='color:#3f5fbf; '> preferences </span><span style='color:#7f9fbf; font-weight:bold; '>-</span><span
+                    style='color:#3f5fbf; '> an array of integers. Indices of people</span><span
+                    style='color:#7f9fbf; font-weight:bold; '>,</span><span
+                    style='color:#3f5fbf; '> whom they love</span>
+                <span style='color:#3f5fbf; '>&#xa0;</span><span style='color:#7f9fbf; font-weight:bold; '>*</span><span
+                    style='color:#3f5fbf; '> </span><span style='color:#7f9fbf; font-weight:bold; '>@</span><span
+                    style='color:#3f5fbf; '>returns number of love triangles</span>
+                <span style='color:#3f5fbf; '>&#xa0;*/</span>
+                module<span style='color:#808030; '>.</span>exports <span style='color:#808030; '>=</span> <span
+                    style='color:#800000; font-weight:bold; '>function</span> getLoveTrianglesCount<span
+                    style='color:#808030; '>(</span>preferences <span style='color:#808030; '>=</span> <span
+                    style='color:#808030; '>[</span><span style='color:#808030; '>]</span><span style='color:#808030; '>)</span> <span
+                    style='color:#800080; '>{</span>
+                  <span style='color:#800000; font-weight:bold; '>let</span> skp <span style='color:#808030; '>=</span> <span
+                    style='color:#808030; '>[</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+                  <span style='color:#800000; font-weight:bold; '>let</span> res <span style='color:#808030; '>=</span> <span
+                    style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+
+                  <span style='color:#800000; font-weight:bold; '>for</span> <span
+                    style='color:#808030; '>(</span>i <span style='color:#800000; font-weight:bold; '>in</span> preferences<span
+                    style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+                    <span style='color:#800000; font-weight:bold; '>if</span> <span
+                    style='color:#808030; '>(</span>skp<span style='color:#808030; '>.</span><span
+                    style='color:#800000; font-weight:bold; '>indexOf</span><span
+                    style='color:#808030; '>(</span>i <span style='color:#808030; '>*</span> <span
+                    style='color:#008c00; '>1</span><span style='color:#808030; '>)</span> <span
+                    style='color:#808030; '>></span> <span style='color:#808030; '>-</span><span
+                    style='color:#008c00; '>1</span><span style='color:#808030; '>)</span> <span
+                    style='color:#800080; '>{</span>
+                      <span style='color:#800000; font-weight:bold; '>continue</span><span
+                    style='color:#800080; '>;</span>
+                    <span style='color:#800080; '>}</span>
+                    <span style='color:#800000; font-weight:bold; '>let</span> first <span
+                    style='color:#808030; '>=</span> <span style='color:#808030; '>[</span>preferences<span
+                    style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span><span
+                    style='color:#808030; '>,</span> i <span style='color:#808030; '>*</span> <span
+                    style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+                    <span style='color:#800000; font-weight:bold; '>let</span> last <span
+                    style='color:#808030; '>=</span> first<span style='color:#800080; '>;</span>
+                    <span style='color:#800000; font-weight:bold; '>let</span> s <span style='color:#808030; '>=</span> <span
+                    style='color:#808030; '>[</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+
+                    <span style='color:#800000; font-weight:bold; '>for</span> <span
+                    style='color:#808030; '>(</span>j <span style='color:#808030; '>=</span> <span
+                    style='color:#008c00; '>1</span><span style='color:#800080; '>;</span> j <span
+                    style='color:#808030; '>&lt;</span> <span style='color:#008c00; '>4</span><span
+                    style='color:#800080; '>;</span> j<span style='color:#808030; '>++</span><span
+                    style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+                      <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>last<span
+                    style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>join</span><span
+                    style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span
+                    style='color:#808030; '>==</span> <span style='color:#808030; '>[</span>preferences<span
+                    style='color:#808030; '>[</span>last<span style='color:#808030; '>[</span><span
+                    style='color:#008c00; '>0</span><span style='color:#808030; '>]</span> <span
+                    style='color:#808030; '>-</span> <span style='color:#008c00; '>1</span><span
+                    style='color:#808030; '>]</span><span style='color:#808030; '>,</span> last<span
+                    style='color:#808030; '>[</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>]</span> <span
+                    style='color:#808030; '>-</span> <span style='color:#008c00; '>1</span><span
+                    style='color:#808030; '>]</span><span style='color:#808030; '>.</span><span
+                    style='color:#800000; font-weight:bold; '>join</span><span style='color:#808030; '>(</span><span
+                    style='color:#808030; '>)</span><span style='color:#808030; '>)</span> <span
+                    style='color:#800080; '>{</span>
+                        last <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span
+                    style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+                        <span style='color:#800000; font-weight:bold; '>break</span><span
+                    style='color:#800080; '>;</span>
+                      <span style='color:#800080; '>}</span>
+                      last <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span>preferences<span
+                    style='color:#808030; '>[</span>last<span style='color:#808030; '>[</span><span
+                    style='color:#008c00; '>0</span><span style='color:#808030; '>]</span> <span
+                    style='color:#808030; '>-</span> <span style='color:#008c00; '>1</span><span
+                    style='color:#808030; '>]</span><span style='color:#808030; '>,</span> last<span
+                    style='color:#808030; '>[</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>]</span> <span
+                    style='color:#808030; '>-</span> <span style='color:#008c00; '>1</span><span
+                    style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+                      s<span style='color:#808030; '>.</span>push<span style='color:#808030; '>(</span>last<span
+                    style='color:#808030; '>[</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>]</span> <span
+                    style='color:#808030; '>-</span> <span style='color:#008c00; '>1</span><span
+                    style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                    <span style='color:#800080; '>}</span>
+
+                    <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>first<span
+                    style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>join</span><span
+                    style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span
+                    style='color:#808030; '>==</span> last<span style='color:#808030; '>.</span><span
+                    style='color:#800000; font-weight:bold; '>join</span><span style='color:#808030; '>(</span><span
+                    style='color:#808030; '>)</span><span style='color:#808030; '>)</span> <span
+                    style='color:#800080; '>{</span>
+                      res<span style='color:#808030; '>++</span><span style='color:#800080; '>;</span>
+                      skp <span style='color:#808030; '>=</span> skp<span style='color:#808030; '>.</span><span
+                    style='color:#800000; font-weight:bold; '>concat</span><span style='color:#808030; '>(</span>s<span
+                    style='color:#808030; '>)</span>
+                    <span style='color:#800080; '>}</span>
+                  <span style='color:#800080; '>}</span>
+                  <span style='color:#800000; font-weight:bold; '>return</span> res<span
+                    style='color:#800080; '>;</span>
+                <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+                </pre>
+            <!--Created using ToHtml.com on 2019-03-12 20:25:50 UTC -->
+        </details>
+
+        <details>
+            <summary>python</summary>
+            <pre style='color:#000000;background:#ffffff;'>
+                <span style='color:#800000; font-weight:bold; '>def</span> run<span style='color:#808030; '>(</span>self<span
+                style='color:#808030; '>,</span> task<span style='color:#808030; '>:</span> BaseTask<span
+                style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+                <span style='color:#696969; '>"""</span>
+                <span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;Метод для запуска всех заданий, наследованых от BaseTask</span>
+                <span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;:param task: проинициализированый объект задания</span>
+                <span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;:return:</span>
+                <span style='color:#696969; '>&#xa0;&#xa0;&#xa0;&#xa0;"""</span>
+                    <span style='color:#800000; font-weight:bold; '>try</span><span style='color:#808030; '>:</span>
+                        <span style='color:#800000; font-weight:bold; '>return</span> task<span style='color:#808030; '>.</span>run<span
+                    style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+                    <span style='color:#800000; font-weight:bold; '>except</span> <span style='color:#074726; '>Exception</span> <span
+                    style='color:#800000; font-weight:bold; '>as</span> ex<span style='color:#808030; '>:</span>
+                        self<span style='color:#808030; '>.</span>logger<span style='color:#808030; '>.</span>error<span
+                    style='color:#808030; '>(</span><span style='color:#0000e6; '>"ERROR"</span><span
+                    style='color:#808030; '>,</span>
+                                          class_name<span style='color:#808030; '>=</span>task<span
+                    style='color:#808030; '>.</span><span style='color:#074726; '>__class__</span><span
+                    style='color:#808030; '>.</span><span style='color:#074726; '>__name__</span><span
+                    style='color:#808030; '>,</span>
+                                          <span style='color:#074726; '>exception</span><span
+                    style='color:#808030; '>=</span>ex<span style='color:#808030; '>.</span><span
+                    style='color:#074726; '>__class__</span><span style='color:#808030; '>.</span><span
+                    style='color:#074726; '>__name__</span><span style='color:#808030; '>,</span>
+                                          description<span style='color:#808030; '>=</span><span
+                    style='color:#400000; '>str</span><span style='color:#808030; '>(</span>ex<span
+                    style='color:#808030; '>)</span><span style='color:#808030; '>,</span>
+                                          task_uuid<span style='color:#808030; '>=</span>task<span
+                    style='color:#808030; '>.</span>uuid<span style='color:#808030; '>,</span>
+                                          task_id<span style='color:#808030; '>=</span>task<span
+                    style='color:#808030; '>.</span>tid<span style='color:#808030; '>,</span>
+                                          task<span style='color:#808030; '>=</span>task<span
+                    style='color:#808030; '>.</span>name<span style='color:#808030; '>,</span>
+                                          exc_info<span style='color:#808030; '>=</span>ex<span style='color:#808030; '>)</span>
+                        data <span style='color:#808030; '>=</span> <span style='color:#800080; '>{</span>
+                            <span style='color:#0000e6; '>'debug'</span><span style='color:#808030; '>:</span> task<span
+                    style='color:#808030; '>.</span>debugdata<span style='color:#808030; '>,</span>
+                            <span style='color:#0000e6; '>'traceback'</span><span style='color:#808030; '>:</span>traceback<span
+                    style='color:#808030; '>.</span>format_tb<span style='color:#808030; '>(</span>ex<span
+                    style='color:#808030; '>.</span>__traceback__<span style='color:#808030; '>)</span>
+                        <span style='color:#800080; '>}</span>
+                        self<span style='color:#808030; '>.</span>bg_tasks<span style='color:#808030; '>.</span>end_task<span
+                    style='color:#808030; '>(</span>task<span style='color:#808030; '>.</span>tid<span
+                    style='color:#808030; '>,</span> status<span style='color:#808030; '>=</span><span
+                    style='color:#44aadd; '>-</span><span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span>
+                                               message<span style='color:#808030; '>=</span><span
+                    style='color:#0000e6; '>"EXCEPTION ("</span><span style='color:#44aadd; '>+</span>ex<span
+                    style='color:#808030; '>.</span><span style='color:#074726; '>__class__</span><span
+                    style='color:#808030; '>.</span><span style='color:#074726; '>__name__</span><span
+                    style='color:#44aadd; '>+</span><span style='color:#0000e6; '>"): "</span><span
+                    style='color:#44aadd; '>+</span><span style='color:#400000; '>str</span><span
+                    style='color:#808030; '>(</span>ex<span style='color:#808030; '>)</span><span
+                    style='color:#808030; '>,</span>
+                                               data<span style='color:#808030; '>=</span>data<span
+                    style='color:#808030; '>)</span>
+                        <span style='color:#800000; font-weight:bold; '>raise</span> ex
+                </pre>
+            <!--Created using ToHtml.com on 2019-03-12 20:27:33 UTC -->
+        </details>
+    </article>
+
+    <article>
+        <h2 class="title">Experience</h2>
+        <ul>
+            <li>
+                <strong>2006-2008</strong>: FoxPro and Delphi developer
+            </li>
+            <li>
+                <strong>2008-2013</strong>: Delphi developer, system administrator (Windows)
+            </li>
+            <li>
+                <strong>2014-2019</strong>: Full stack developer in PU Vitebskoblgas (PHP, HTML, JS, TS, Databases)
+            </li>
+        </ul>
+
+        <p>
+            At the moment I am working on a large project with microservice architecture.
+            The project includes a mobile client, a web-based desktop application, a REST-full API in the backend,
+            RPC microservices working through RabbitMQ.
+        </p>
+        <p>
+            My first app on Angular. This is database of gas reduction units:
+        </p>
+        <p class="link">
+            <a href="https://bitbucket.org/Andrew-6676/urg.angular2/src/master/">Frontend</a> - angular 2, later
+            upgraded to 5
+        </p>
+        <p class="link">
+            <a href="https://bitbucket.org/Andrew-6676/urg.yii2/src/master/">Backend</a> - PHP+Yii2
+        </p>
+        <p>
+            One of the first application on angular. It collects and displays temperature data from WellPro controllers
+            using the Modbus protocol:
+        </p>
+        <p class="link">
+            <a href="https://bitbucket.org/Andrew-6676/temperature/src/master/">Backend (NodeJS+Express) + Frontend
+                (Angular 2.4)</a>
+        </p>
+
+    </article>
+
+    <article>
+        <h2 class="title">Education</h2>
+        <ul>
+            <li>
+                <strong>2002-2006</strong>: Vitebsk polytechnical сollege - Software Support of Information Technologies
+            </li>
+            <li>
+                <strong>2006-2011</strong>: Polotsk state university - faculty of information technologies - Software
+                Support of Information Technologies
+            </li>
+            <li>
+                <strong>2007</strong>: EPAM Java courses
+            </li>
+            <li>
+                <strong>2019</strong>: <a href="https://www.codecademy.com/users/andrew1622305209/achievements">Code
+                Academy</a>
+            </li>
+        </ul>
+    </article>
+
+    <article>
+        <h2 class="title">English Skills</h2>
+        <p>
+            English Level: Pre-Intermediate
+        </p>
+        <p>
+            Learning English started in school.
+        </p>
+    </article>
+</main>
+<footer>
+    Copyright © Anadrei Shuniou 2019
+</footer>
+</body>
+</html>
