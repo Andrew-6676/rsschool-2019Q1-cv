@@ -90,7 +90,7 @@ def run(self, task: BaseTask):
 ## Experience
 * _**2006-2008**_: FoxPro and Delphi developer
 * _**2008-2013**_: Delphi developer, system administrator (Windows)
-* _**2014-2019**_: Full stack developer in PU Vitebskoblgas (PHP, HTML, JS, TS, Databases)
+* _**2014-2019**_: Full stack developer in PU Vitebskoblgas (PHP, HTML, JS, TS, Python, Databases)
 
 At the moment I am working on a large project with microservice architecture. 
 The project includes a mobile client, a web-based desktop application, a REST-full API in the backend, 
@@ -108,6 +108,8 @@ One of the first application on angular. It collects and displays temperature da
 * _**2006-2011**_: POLOTSKolotsk state university - faculty of information technologies - Software Support of Information Technologies
 * _**2007**_: EPAM Java courses  
 * _**2019**_: [Code Academy](https://www.codecademy.com/users/andrew1622305209/achievements) 
+* _**2019**_: The Rolling Scopes School (EPAM)
+
   
 ## English Skills
 English Level: Pre-Intermediate  
